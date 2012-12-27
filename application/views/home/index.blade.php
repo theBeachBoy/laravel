@@ -9,6 +9,7 @@
 </head>
 <body>
 	Hello from the view<br />
+	etest  
 	Insert image: {{ HTML::image('img/logo.gif', 'alt-text') }}
 </body>
 </html>

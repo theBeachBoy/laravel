@@ -34,7 +34,9 @@
 
 Route::get('/', function()
 {
-	return View::make('home.index');
+//		$users = User::all();
+		dd('in the route');
+//	return View::make('home.index');
 });
 
 Route::get('about', function() {

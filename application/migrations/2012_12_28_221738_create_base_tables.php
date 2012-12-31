@@ -305,10 +305,10 @@ class Create_Base_Tables {
 	`idFlyer` INT UNSIGNED NOT NULL,
 	`idProduct` INT UNSIGNED NOT NULL,
 	`price` DECIMAL(5,2) UNSIGNED,
-	`enDisplay` VARCHAR(100),
-	`frDisplay` VARCHAR(100),
-	`minUnits` TINYINT UNSIGNED,
-	`maxUnits` TINYINT UNSIGNED,
+	`enDisplay` VARCHAR(100) NOT NULL,
+	`frDisplay` VARCHAR(100) NOT NULL,
+	`minUnit` TINYINT UNSIGNED,
+	`maxUnit` TINYINT UNSIGNED,
 	`minWeight` SMALLINT UNSIGNED,
 	`maxWeight` SMALLINT UNSIGNED,
 	`minVolume` SMALLINT UNSIGNED,
@@ -328,10 +328,10 @@ class Create_Base_Tables {
 			$table->integer('idFlyer')->unsigned();
 			$table->integer('idProduct')->unsigned();
 			$table->decimal('price', 5, 2)->unsigned();
-			$table->string('enDisplay', 100)->nullable();
-			$table->string('frDisplay', 100)->nullable();
-			$table->integer('minUnits')->unsigned()->nullable();
-			$table->integer('maxUnits')->unsigned()->nullable();
+			$table->string('enDisplay', 100);
+			$table->string('frDisplay', 100);
+			$table->integer('minUnit')->unsigned()->nullable();
+			$table->integer('maxUnit')->unsigned()->nullable();
 			$table->integer('minWeight')->unsigned()->nullable();
 			$table->integer('maxWeight')->unsigned()->nullable();
 			$table->integer('minVolume')->unsigned()->nullable();

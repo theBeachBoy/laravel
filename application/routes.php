@@ -35,13 +35,22 @@
 Route::get('/', function()
 {
 //		$users = User::all();
-		dd('in the route');
+		dd('in the default get route');
 //	return View::make('home.index');
 });
 
-Route::get('about', function() {
-	return View::make('home.about');
+/*
+* Master route is to play with database directly for development. Will be removed before production
+*/
+
+Route::get('/master', function()
+{
+		dd('in the master get route');
 });
+
+//Route::get('about', function() {
+//	return View::make('home.about');
+//});
 
 /*
 |--------------------------------------------------------------------------

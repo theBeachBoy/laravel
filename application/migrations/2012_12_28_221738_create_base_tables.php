@@ -287,10 +287,11 @@ class Create_Base_Tables {
 */
 		Schema::create('product_extra', function($table)
 		{
+			$table->increments('id'); // Only because Laravel wants it. useless column.
 			$table->integer('idProduct')->unsigned();
 			$table->integer('idExtra')->unsigned();
 			$table->timestamps();
-			$table->primary(array('idProduct', 'idExtra'));
+			$table->unique(array('idProduct', 'idExtra'));
 			$table->index('idProduct', 'idProduct_ix');
 			$table->index('idExtra', 'idExtra_ix');
 			$table->foreign('idProduct', 'pe_pro_fk')->references('idProduct')->on('products');

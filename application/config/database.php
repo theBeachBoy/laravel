@@ -77,6 +77,16 @@ return array(
 			'prefix'   => '',
 		),
 
+		'cpanel' => array(
+			'driver'   => 'mysql',
+			'host'     => 'localhost',
+			'database' => 'information_schema',
+			'username' => 'root',
+			'password' => 'Patate01',
+			'charset'  => 'utf8',
+			'prefix'   => '',
+		),
+
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',

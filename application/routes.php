@@ -39,6 +39,19 @@ Route::get('/', function()
 //	return View::make('home.index');
 });
 
+
+// Route to admin section
+// TODO : filter access
+Route::get('admin/index', array('as' => 'admin', 'do' => function()
+{
+
+	// Get all tables
+	$tables = DB::table("TABLES","cpanel")->where('table_schema', '=', 'monepicerie')->get();
+
+
+	return View::make('admin.index')->with('tables', $tables);
+}));
+
 /*
 * Master route is to play with database directly for development. Will be removed before production
 */

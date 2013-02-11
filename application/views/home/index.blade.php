@@ -10,6 +10,8 @@
 <body>
 	Hello from the view<br />
 	etest  
+	Patate
+	Patate2
 	Insert image: {{ HTML::image('img/logo.gif', 'alt-text') }}
 </body>
 </html>

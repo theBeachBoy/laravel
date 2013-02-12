@@ -1,13 +1,20 @@
 @layout('master')
 
 @section('container')
+	
+	<br /><br />
 
-	<table class="table table-striped">
+	<h1>Admin Panel</h1>
+
+	<br />
+
+	<h2>MonEpicerie Tables</h2>
+	<table class="table table-striped table-bordered">
 
 		@foreach($tables as $table)
 			<tr>
 				<td>
-				{{ $table->table_name }}
+				{{ HTML::link('admin/index/'.$table->table_name, $table->table_name) }}
 				</td>
 			</tr>
 		@endforeach

@@ -39,6 +39,10 @@ Route::get('/', function()
 //	return View::make('home.index');
 });
 
+Route::get('admin/index/(:any)', array('as' => 'admin', 'do' => function()
+{
+	dd(URL::current());
+}));
 
 // Route to admin section
 // TODO : filter access

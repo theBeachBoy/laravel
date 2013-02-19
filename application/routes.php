@@ -63,10 +63,6 @@ Route::get('/master', function()
 		dd('in the master get route');
 });
 
-//Route::get('about', function() {
-//	return View::make('home.about');
-//});
-
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
